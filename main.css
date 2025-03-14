@@ -1,0 +1,297 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Layout */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+    #menu {
+        background-color: #007bff;
+        border-top-left-radius: 10px; /* Ajuste o valor conforme necessário */
+        height: 60px;
+        align-items: center;
+    }
+#menu h1 {
+    color: white;
+    
+}
+
+#menu nav {
+    display: flex;
+}
+
+#menu nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#menu nav ul li {
+    margin-left: 16px;
+}
+
+#menu nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#menu nav ul li a:hover {
+    color: #e3dede;
+}
+
+/* Container geral */
+.container {
+    margin: 20px auto;
+    padding: 0 16px;
+    max-width: 1220px;
+}
+
+.sobre {
+    max-width: 100%;
+    display: flex;
+}
+
+.sobre img {
+    min-width: 50%;
+    max-width: 100%;
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+
+.sobre p {
+    width: 100%;
+}
+
+.linha {
+    border-bottom: 2px solid #007bff;  /* Separador azul entre as linhas */
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.texto {
+    max-width: 100%; /* O texto ocupa 100% da largura disponível */
+}
+
+.texto h2 {
+    color: #007bff;
+    font-size: 24px;
+}
+
+.texto p {
+    line-height: 1.6;
+}
+
+#produtos h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.produtos {
+        display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.produto, .titulo_produto {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.produto img {
+    margin-bottom: 16px;
+    max-width: 200px;
+}
+
+.produto h4 {
+    font-size: 18px;
+    color: #007bff;
+    font-weight: 700;
+}
+
+.produto p {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.produto button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.produto button:hover {
+    background-color: #0056b3;
+}
+
+h2, h3 {
+    text-align: left;
+    margin-bottom: 8px;
+    color: #007bff;
+   font-size: 16px;
+}
+
+.container-menu {
+    margin: 20px auto;
+    padding: 0 16px;
+    max-width: 1220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+
+    .sobre {
+        max-width: 550px;
+        display: inline;
+    }
+    .sobre img {
+        max-width: 550px;
+        align-items: flex-start;
+    }
+
+    .sobre p {
+        max-width: 100%;
+    }
+    
+
+    .texto {
+        width: 100%;
+    }
+
+    /* Ajuste dos produtos para 2 colunas e tamanho reduzido */
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 16px;
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .produto {
+        background-color: #fff;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .produto h4 {
+        font-size: 18px;
+        color: #007bff;
+    }
+
+    .produto p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .produto button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .container {
+        display: flex;
+        max-width: 550px;
+    }
+
+    .titulo_produto {
+        margin-left: 16px;
+        align-items: flex-start;
+    }
+
+    #menu {
+        max-width: 550px;
+
+        }
+    .container-menu {
+        margin: 20px auto;
+        padding: 0 16px;
+        max-width: 550px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .sobre {
+        max-width: 150px;
+        display: inline;
+    }
+    .sobre img {
+        max-width: 150px;
+        align-items: flex-start;
+    }
+
+    .sobre p {
+        max-width: 100%;
+    }
+    
+
+    .texto {
+        width: 100%;
+    }
+
+    /* Ajuste dos produtos para 2 colunas e tamanho reduzido */
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 16px;
+        align-items: flex-start;
+    }
+
+    .produto {
+        background-color: #fff;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .produto h4 {
+        font-size: 18px;
+        color: #007bff;
+    }
+
+    .produto p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .produto button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .container {
+        display: flex;
+        max-width: 300px;
+    }
+
+    .titulo_produto {
+        margin-left: 16px;
+        align-items: flex-start;
+    }
+
+    #menu {
+        max-width: 250px;
+        }
+    .container-menu {
+        padding: 0 16px;
+        max-width: 250px;
+        justify-content:left;
+    }
+    #menu nav {
+        justify-content:left;
+    }
+    h1 {
+        font-size: 14px;
+    }
+}
